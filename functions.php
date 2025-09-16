@@ -12,6 +12,25 @@ function register_my_menu() {
 }
 add_action('init', 'register_my_menu');
 
+function theme_styles_scripts(){
+    //load css
+    wp_enqueue_style(
+        'main-css',
+        get_template_directory_uri(). '/css/style.css', array(),
+        '1.0'
+    );
+
+    //load js
+    wp_enqueue_script(
+        'main-js',
+        get_template_directory_uri(). '/js/scripts.js', array('jquery'),
+        '1.0',
+        true
+    );
+}
+
+add_action('wp_enqueue_scripts', 'theme_styles_scripts');
+
 
 
 

@@ -1,0 +1,64 @@
+/*Basic Styles for the Menu*/
+/* .main-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+} */
+
+/*Basic Styles for the Header and Body*/
+/* header{
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+body{
+    margin: 0;
+    font-family: Arial;
+} */
+
+.hero {
+    background: #0073aa;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/*Features Section*/
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    display: inline-block;
+    background: #ddd;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.sidebar {
+    width: 300px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.widget {
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
