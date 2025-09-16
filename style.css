@@ -1,0 +1,12 @@
+/*
+Theme Name: First Theme 1
+Theme URI: http://osaaroh.vercel.app
+Author: Osaro Iyoha
+Description: A simple wordpress theme for beginners
+Version 1.1
+*/
+
+body {
+    background: #f0f0f0;
+    font-family: Arial;
+}
