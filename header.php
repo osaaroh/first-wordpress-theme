@@ -15,6 +15,3 @@
                 ))
             ?>
         </header>
-    </body>
-
-</html>
