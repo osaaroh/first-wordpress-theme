@@ -1,18 +1,18 @@
 <?php get_header(); ?>
-
-<main>
+    <main>
+    <h1>Latest Blog Posts</h1>
     <?php if (have_posts()) : ?>
         <?php while (have_posts()): the_post(); ?>
             <article>
-                <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a></h2>
-                <?php the_excerpt(); ?>
+                <h2><?php the_title(); ?></h2>
+                <?php the_content(); ?>
             </article>
         <?php endwhile; ?>
 
     <?php else : ?>
-        <p>Sorry, no content found!</p>
+        <p>No posts found!</p>
     <?php endif; ?>
 
 </main>
 <?php get_sidebar(); ?> <!--Include the sidebar -->
-<? get_footer(); ?>
+<?php get_footer(); ?>

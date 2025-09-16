@@ -11,7 +11,6 @@ function register_my_menu() {
     register_nav_menu('primary-menu', 'Primary Menu');
 }
 add_action('init', 'register_my_menu');
-
 function theme_styles_scripts(){
     //load css
     wp_enqueue_style(
@@ -28,7 +27,11 @@ function theme_styles_scripts(){
         true
     );
 }
+
 add_action('wp_enqueue_scripts', 'theme_styles_scripts');
+
+
+//Creating a sidebar users can drag and drop widgets on the dashboard. Will be used with sidebar.php
 
 function my_first_theme_sidebar() {
     register_sidebar(
@@ -44,6 +47,43 @@ function my_first_theme_sidebar() {
 
 add_action('widgets_init', 'my_first_theme_sidebar');
 
+//Custom post type
+function my_first_theme_custom_post_type() {
+    register_post_type('portfolio',
+    array(
+        'labels' => array(
+            'name'           =>__('Portfolio'),
+            'singular_name'  =>__('Portfolio Item'),
+        ),
+
+        'public'        =>   true,
+        'has_archive'   =>   true,
+        'supports'      =>   array('title', 'editor', 'thumbnail', 'excerpt'),
+        'menu_icon'     =>   'dashicons-portfolio'
+    )
+    );
+}
+
+add_action('init', 'my_first_theme_custom_post_type');
+
+
+function my_first_theme_custom_post_type_yarn() {
+    register_post_type('yarn',
+    array(
+        'labels' => array(
+            'name'           =>__('Yarn'),
+            'singular_name'  =>__('Yarn Item'),
+        ),
+
+        'public'        =>   true,
+        'has_archive'   =>   true,
+        'supports'      =>   array('title', 'editor', 'thumbnail', 'excerpt'),
+        'menu_icon'     =>   'dashicons-portfolio'
+    )
+    );
+}
+
+add_action('init', 'my_first_theme_custom_post_type_yarn');
 
 
 
